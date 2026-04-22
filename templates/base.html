@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}A simple and clean Flask web application with login and signup functionality.{% endblock %}">
+    <title>{% block title %}Flask App{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="nav-logo">
+                <span class="logo-icon">◈</span> FlaskApp
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" class="nav-link {% block nav_home %}{% endblock %}">Home</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav-link {% block nav_login %}{% endblock %}">Login</a></li>
+                <li><a href="{{ url_for('signup') }}" class="nav-link btn-nav {% block nav_signup %}{% endblock %}">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 FlaskApp. Built with Flask &amp; Python.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

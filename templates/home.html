@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}FlaskApp — Home{% endblock %}
+{% block meta_description %}Welcome to FlaskApp — a clean and modern Flask web application.{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+        <span class="hero-badge">🚀 Welcome to FlaskApp</span>
+        <h1 class="hero-title">Build Something <span class="gradient-text">Amazing</span></h1>
+        <p class="hero-subtitle">
+            A clean, beginner-friendly full-stack web application built with 
+            Flask, HTML, CSS, and JavaScript. Simple, elegant, and easy to extend.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ url_for('signup') }}" class="btn btn-primary">Get Started</a>
+            <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="features-container">
+        <h2 class="section-title">Why FlaskApp?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightweight</h3>
+                <p>Built on Flask — a micro-framework that's fast, simple, and stays out of your way.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Clean Design</h3>
+                <p>Modern, responsive UI with smooth animations and a beautiful color palette.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Auth Ready</h3>
+                <p>Login and signup pages with form handling — ready to connect to any database.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Looks great on desktop, tablet, and mobile devices — no compromises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
