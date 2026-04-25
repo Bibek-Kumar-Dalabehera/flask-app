@@ -30,5 +30,17 @@ def signup():
     return render_template("signup.html")
 
 
+@app.route("/forgot_password", methods=["GET", "POST"])
+def forgot_password():
+    """Render the forgot password page and handle password reset request."""
+    if request.method == "POST":
+        email = request.form.get("email")
+        print(f"[FORGOT PASSWORD] Email: {email}")
+        # TODO: Implement email sending functionality to reset password
+        # TODO: Generate reset token and store in database
+        # TODO: Send email with reset link
+    return render_template("forgot_password.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
