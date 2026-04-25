@@ -34,6 +34,11 @@ def signup():
 def about_flask():
     """Render the page describing Flask framework."""
     return render_template("about_flask.html")
+@app.route("/about")
+def about():
+    """Render the about page."""
+    return render_template("about.html")
+
 
 
 if __name__ == "__main__":
