@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}About Flask — FlaskApp{% endblock %}
+{% block meta_description %}Learn about Flask — a lightweight and powerful Python web framework.{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-hero">
+        <div class="about-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="about-hero-content">
+            <div class="flask-logo">🧪</div>
+            <h1 class="about-title">What is <span class="gradient-text">Flask</span>?</h1>
+            <p class="about-subtitle">
+                A lightweight, flexible Python web framework designed to build web applications quickly and efficiently.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <!-- Introduction Section -->
+        <div class="about-card">
+            <div class="card-icon">📚</div>
+            <h2>Framework Overview</h2>
+            <p>
+                Flask is a micro web framework written in Python. It is classified as a microframework because 
+                it aims to keep the core simple but extensible. Flask does not include a built-in ORM or form 
+                validation utilities by default—instead, these are provided by extensions, keeping Flask lightweight 
+                and flexible for developers.
+            </p>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="about-features">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-num">⚡</div>
+                    <h3>Lightweight</h3>
+                    <p>Minimal core framework that's easy to learn and understand. You only add what you need.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">🔧</div>
+                    <h3>Extensible</h3>
+                    <p>Rich ecosystem of extensions for database ORM, authentication, validation, and more.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">🚀</div>
+                    <h3>Fast to Develop</h3>
+                    <p>Simple routing, built-in development server, and excellent debugging tools for rapid development.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">🎯</div>
+                    <h3>Flexible</h3>
+                    <p>Choose your own tools and libraries. Flask doesn't impose architectural decisions on you.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">📝</div>
+                    <h3>Well Documented</h3>
+                    <p>Comprehensive documentation and a large community with plenty of tutorials and examples.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-num">🔒</div>
+                    <h3>Secure</h3>
+                    <p>Built-in security features including CSRF protection and secure session management.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Use Flask Section -->
+        <div class="about-card alt">
+            <div class="card-icon">🤔</div>
+            <h2>Why Use Flask?</h2>
+            <ul class="about-list">
+                <li><strong>Easy to Start:</strong> Simple syntax and straightforward routing make it beginner-friendly</li>
+                <li><strong>Scalable:</strong> Can grow from small projects to large-scale applications with extensions</li>
+                <li><strong>Microservices Ready:</strong> Perfect for building RESTful APIs and microservices</li>
+                <li><strong>Community Support:</strong> Active community with abundant third-party extensions and packages</li>
+                <li><strong>Testing:</strong> Built-in test client makes writing unit tests straightforward</li>
+                <li><strong>Rapid Prototyping:</strong> Quickly build prototypes and MVPs without boilerplate code</li>
+            </ul>
+        </div>
+
+        <!-- How Flask Works Section -->
+        <div class="about-card">
+            <div class="card-icon">⚙️</div>
+            <h2>How Flask Works</h2>
+            <p>
+                Flask works by decorating Python functions with route handlers. When a user visits a URL, 
+                Flask's routing system matches it to the appropriate function and executes it. Functions 
+                typically return HTML (via templates) or JSON data (for APIs).
+            </p>
+            <div class="code-example">
+                <pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()</code></pre>
+            </div>
+        </div>
+
+        <!-- Popular Extensions Section -->
+        <div class="about-card alt">
+            <div class="card-icon">📦</div>
+            <h2>Popular Flask Extensions</h2>
+            <div class="extensions-grid">
+                <div class="extension-item">
+                    <h3>Flask-SQLAlchemy</h3>
+                    <p>ORM for database management and queries</p>
+                </div>
+                <div class="extension-item">
+                    <h3>Flask-Login</h3>
+                    <p>User session and authentication management</p>
+                </div>
+                <div class="extension-item">
+                    <h3>Flask-WTF</h3>
+                    <p>Form handling, validation, and CSRF protection</p>
+                </div>
+                <div class="extension-item">
+                    <h3>Flask-RESTful</h3>
+                    <p>Building RESTful APIs with minimal code</p>
+                </div>
+                <div class="extension-item">
+                    <h3>Flask-Mail</h3>
+                    <p>Email sending and management</p>
+                </div>
+                <div class="extension-item">
+                    <h3>Flask-Migrate</h3>
+                    <p>Database migration management with Alembic</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Getting Started CTA -->
+        <div class="about-cta">
+            <h2>Ready to Build with Flask?</h2>
+            <p>FlaskApp is built with Flask and demonstrates modern web development practices.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('signup') }}" class="btn btn-primary">Get Started</a>
+                <a href="https://flask.palletsprojects.com/" target="_blank" class="btn btn-secondary">Official Flask Docs</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

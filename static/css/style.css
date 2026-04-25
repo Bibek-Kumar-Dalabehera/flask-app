@@ -374,6 +374,293 @@ a:hover {
 }
 
 /* ========================================
+   Flask Section
+   ======================================== */
+.flask-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(124, 92, 252, 0.08) 0%, rgba(0, 212, 170, 0.04) 100%);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.flask-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.flask-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0 1rem 0;
+    background: var(--clr-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.flask-badge {
+    display: inline-block;
+    background: rgba(124, 92, 252, 0.15);
+    color: var(--clr-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.flask-content p {
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.flask-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--clr-text);
+}
+
+.flask-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(124, 92, 252, 0.1) 0%, transparent 70%);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+}
+
+.illustration-badge {
+    font-size: 5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ========================================
+   About Page Styles
+   ======================================== */
+.about-section {
+    padding-top: 0;
+}
+
+.about-hero {
+    position: relative;
+    padding: 6rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 50%, rgba(124, 92, 252, 0.1) 0%, transparent 70%);
+}
+
+.about-bg-shapes {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.flask-logo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.01em;
+}
+
+.about-subtitle {
+    font-size: 1.1rem;
+    color: var(--clr-text-muted);
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.about-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.about-card.alt {
+    background: linear-gradient(135deg, rgba(124, 92, 252, 0.08) 0%, rgba(0, 212, 170, 0.04) 100%);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.about-list li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+}
+
+.about-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--clr-accent);
+    font-weight: bold;
+}
+
+.code-example {
+    background: var(--clr-surface-2);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+
+.code-example pre {
+    margin: 0;
+}
+
+.code-example code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--clr-text);
+    line-height: 1.6;
+}
+
+.about-features {
+    margin: 3rem 0;
+}
+
+.extensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.extension-item {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.extension-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 92, 252, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.extension-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.extension-item p {
+    font-size: 0.85rem;
+    color: var(--clr-text-muted);
+}
+
+.feature-num {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.features-grid h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.features-grid p {
+    font-size: 0.9rem;
+    color: var(--clr-text-muted);
+}
+
+.about-cta {
+    background: linear-gradient(135deg, rgba(124, 92, 252, 0.15) 0%, rgba(0, 212, 170, 0.1) 100%);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.about-cta h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.about-cta p {
+    color: var(--clr-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
    Auth Pages (Login / Signup)
    ======================================== */
 .auth-section {
@@ -799,6 +1086,17 @@ a:hover {
     }
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ========================================
    Responsive
    ======================================== */
@@ -835,6 +1133,47 @@ a:hover {
 
     .features {
         padding: 3rem 1.5rem;
+    }
+
+    .flask-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .flask-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .flask-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .flask-illustration {
+        height: 200px;
+    }
+
+    .about-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-container {
+        padding: 1.5rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .extensions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
     }
 
     .auth-card {
