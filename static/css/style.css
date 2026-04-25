@@ -558,6 +558,62 @@ a:hover {
     transition: all 0.4s ease;
 }
 
+/* ========================================
+   Form Validation States
+   ======================================== */
+
+/* Error State */
+.input-wrapper input.error {
+    border-color: var(--clr-danger);
+    background: rgba(255, 92, 92, 0.05);
+}
+
+.input-wrapper input.error:focus {
+    border-color: var(--clr-danger);
+    box-shadow: 0 0 0 3px rgba(255, 92, 92, 0.15);
+    background: rgba(255, 92, 92, 0.08);
+}
+
+/* Success State */
+.input-wrapper input.success {
+    border-color: var(--clr-success);
+    background: rgba(0, 212, 170, 0.05);
+}
+
+.input-wrapper input.success:focus {
+    border-color: var(--clr-success);
+    box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+    background: rgba(0, 212, 170, 0.08);
+}
+
+/* Field Error Message */
+.field-error {
+    font-size: 0.75rem;
+    color: var(--clr-danger);
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    animation: slideDown 0.3s ease;
+}
+
+.field-error::before {
+    content: "⚠";
+    font-size: 0.85rem;
+}
+
+/* Animation for error messages */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .strength-text {
     font-size: 0.75rem;
     font-weight: 600;
