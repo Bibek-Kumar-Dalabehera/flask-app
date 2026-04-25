@@ -30,6 +30,15 @@ def signup():
     return render_template("signup.html")
 
 
+@app.route("/about-flask")
+def about_flask():
+    """Render the page describing Flask framework."""
+    return render_template("about_flask.html")
+@app.route("/about")
+def about():
+    """Render the about page."""
+    return render_template("about.html")
+
 @app.route("/forgot_password", methods=["GET", "POST"])
 def forgot_password():
     """Render the forgot password page and handle password reset request."""

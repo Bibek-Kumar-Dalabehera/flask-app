@@ -19,6 +19,8 @@
             </a>
             <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}" class="nav-link {% block nav_home %}{% endblock %}">Home</a></li>
+                <li><a href="{{ url_for('about_flask') }}" class="nav-link {% block nav_about_flask %}{% endblock %}">About Flask</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link {% block nav_about %}{% endblock %}">About</a></li>
                 <li><a href="{{ url_for('login') }}" class="nav-link {% block nav_login %}{% endblock %}">Login</a></li>
                 <li><a href="{{ url_for('signup') }}" class="nav-link btn-nav {% block nav_signup %}{% endblock %}">Sign Up</a></li>
             </ul>
@@ -44,6 +46,10 @@
                 <h3 class="footer-title">Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about_flask') }}">About Flask</a></li>
+
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+
                     <li><a href="{{ url_for('login') }}">Login</a></li>
                     <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
                     <li><a href="{{ url_for('forgot_password') }}">Forgot Password</a></li>
